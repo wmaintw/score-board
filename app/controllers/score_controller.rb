@@ -1,6 +1,6 @@
 class ScoreController < ApplicationController
   def show
-    @challenge_count_max = 4
+    @challenge_count_max = 6
     @challenges = get_all_challenges
     @scores = get_scores
   end
