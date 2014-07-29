@@ -37,4 +37,10 @@ class ScoreController < ApplicationController
 
     @scores
   end
+
+  def board
+    @challenge_count_max = 6
+    @challenges = get_all_challenges
+    @scores = get_scores
+  end
 end

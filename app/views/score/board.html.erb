@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="well">
+    <img src="assets/tw-logo.png" alt="Security Challenge" height="20"/>
+    <h1 class="text-center">安全攻防营之英雄榜</h1>
+    <div class="clearfix"></div>
+  </div>
+
+  <table class="table table-condensed">
+    <tr>
+      <% (1..@challenge_count_max).each do |i| %>
+          <th>漏洞 <%= i %></th>
+      <% end %>
+    </tr>
+
+    <tr>
+      <% (0..@challenge_count_max-1).each do |j| %>
+          <td class="col-md-2">
+            <ul>
+              <% @scores[j].each do |score| %>
+                  <li class="names"><%= score.user_name %></li>
+              <% end %>
+            </ul>
+          </td>
+      <% end %>
+    </tr>
+
+  </table>
+
+  <br/>
+
+  <script language="JavaScript">
+      function refreshPage()
+      {
+          window.location.reload();
+      }
+      setTimeout('refreshPage()', 5000);
+  </script>
+
+</div>

@@ -1,6 +1,7 @@
 SecurityChallenge::Application.routes.draw do
   get "score" => 'score#show'
   post "score" => 'score#add'
+  get "board" => 'score#board'
 
   get "score/token" => 'token#add'
 
